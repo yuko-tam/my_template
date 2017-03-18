@@ -1,0 +1,36 @@
+﻿@charset "UTF-8";
+/* ### setting.scss ### */
+//======================================================================================================================
+
+// variable
+//------------------------------------------------------------------------------
+$width: 100%;
+
+$color: #333;
+$colorLink: #e4008c;
+
+$img-path:"../img/";
+
+
+%contWidth{
+    width:$width;
+    margin:0 auto;
+}
+// common
+//------------------------------------------------------------------------------
+%cf {
+    *zoom: 1;
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+}
+
+%widthCenter {
+    width: $width;
+    margin: 0 auto;
+}
