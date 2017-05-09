@@ -1,0 +1,47 @@
+﻿@charset "UTF-8";
+/* ### setting.scss ### */
+//======================================================================================================================
+
+// variable
+//------------------------------------------------------------------------------
+$width: 1020px;
+
+$color: #333;
+$colorLink: #f18e1b;
+$keyColor: #388db0;
+
+$img-path:"../img/";
+
+
+%contWidth{
+    max-width:$width;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@include media(sp) { 
+  %contWidth{
+    padding-right:10px;
+    padding-left:10px;
+  }
+}
+
+
+// common
+//-------------------------------------------------------------------------------
+%cf {
+    *zoom: 1;
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+}
+
+%widthCenter {
+    width: $width;
+    margin: 0 auto;
+}

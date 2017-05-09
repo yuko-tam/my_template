@@ -1,0 +1,247 @@
+﻿@charset "UTF-8";
+/* ### parts.scss ### */
+
+.headline2{
+    text-align: center;
+    font-weight: bold;
+    span{
+        display: block;
+    }
+    .jp{
+        font-size: 36px;
+        @include media(sp) {
+            font-size: 20px;
+        }
+    }
+    .en{
+        font-size: 16px;
+        color:$keyColor;
+        @include media(sp) {
+            font-size: 14px;
+        }
+    }
+    &.scheduleIcon{
+        background: url(/img/common/icon_schedule.png) no-repeat center 0;
+        padding-top: 60px;
+    }
+}
+
+
+.button{
+    display: inline-block;
+    padding:20px 80px 20px 50px;
+    width: 280px;
+    color:#fff;
+    text-align: center;
+    background:$keyColor;
+    position: relative;
+    line-height: 1;
+    -webkit-transition: all .25s ease-in;
+       -moz-transition: all .25s ease-in;
+        -ms-transition: all .25s ease-in;
+         -o-transition: all .25s ease-in;
+            transition: all .25s ease-in;
+
+    @include media(sp) {
+        width: auto;
+        display: block;
+        padding:18px 0;
+    }
+    &:after{
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 30px;
+        top:0;
+        bottom: 0;
+        margin:auto;
+        background: url(/img/common/icon_arrow_right.png) no-repeat 0 0;
+        background-size: 100% auto;
+    }
+    &:hover{
+        background:#66b7d8;
+        text-decoration: none;
+    }
+}
+.buttonCenter{
+    text-align: center;
+    margin-bottom: 90px;
+    @include media(sp) {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.lineBlue{
+    background: url(/img/base/line_bg_blue.gif) repeat 0 0;
+}
+.linesnorkeling{
+    background: url(/img/base/line_bg_green.gif) repeat 0 0;
+}
+.linediving{
+    background: url(/img/base/line_bg_orange.gif) repeat 0 0;
+}
+.linelicense{
+    background: url(/img/base/line_bg_pink.gif) repeat 0 0;
+}
+
+
+.borderBlue{border-bottom: 3px solid $keyColor;}
+
+
+
+.tableStyle01{
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+    tr{
+        border-top: 1px solid #ccc;
+    }
+    th{
+        font-weight: bold;
+        font-size: 18px;
+        padding:10px 0;
+        @include media(sp) {
+            display: block;
+            font-size: 16px;
+            padding:10px 0 0;
+        }
+    }
+    td{
+        padding:10px 0;
+        @include media(sp) {
+            display: block;
+        }
+    }
+    &.tourTable{
+        th{
+            width: 7em;
+        }
+    }
+}
+
+.wysiwygArea table,.tableStyle02{
+    width: 100%;
+    th{
+        font-weight: bold;
+        color:$keyColor;
+        padding:10px 30px;
+        background:#d7eef7;
+        border:1px solid #fff;
+        @include media(sp) {
+            padding:5px 10px;
+            display: block;
+        }
+    }
+    td{
+        padding:10px 30px;
+        background:#f7f7f3;
+        border:1px solid #fff;
+        @include media(sp) {
+            padding:5px 10px;
+            display: block;
+        }
+    }
+}
+
+
+.pager{
+    text-align: center;
+    li{
+        display: inline-block;
+        padding:0 5px;
+    }
+    a{
+        display: inline-block;
+        padding:5px 10px;
+    }
+    .prev,.next{
+        padding:0 15px;
+        a{
+            background:$keyColor;
+            color:#fff;
+            border: $keyColor 2px solid;
+            position: relative;
+        }
+        a:hover{
+            background:#fff;
+            color:$keyColor;
+            text-decoration: none;
+        }
+        a:after{
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top:8px;
+            background: url(/img/common/icon_arrow_right.png) no-repeat 0 0;
+            background-size: 100% auto;
+
+        }
+
+    }
+    .prev a{
+        padding-left: 40px;
+        &:after{
+            left: 10px;
+            -webkit-transform: rotate(180deg);
+               -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                 -o-transform: rotate(180deg);
+                    transform: rotate(180deg);
+        }
+    }
+    .next a{
+        padding-right: 40px;
+        &:after{
+            right: 10px;
+        }
+    }
+    .list{
+        @include media(sp) {
+            display: none;
+        }
+        a{
+            color:$keyColor;
+            border: $keyColor 2px solid;
+        }
+        a:hover{
+            background:$keyColor;
+            color:#fff;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.shipIcon{
+    background: url(/img/common/icon_ship.png) no-repeat center 0;
+    padding-top: 60px;
+}
+
+.staffIcon{
+    background: url(/img/common/icon_staff.png) no-repeat center 0;
+    padding-top: 60px;
+}
+
+.shopIcon{
+    background: url(/img/common/icon_shop.png) no-repeat center 0;
+    padding-top: 50px;
+}
+
+.accessIcon{
+    background: url(/img/common/icon_access.png) no-repeat center 0;
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
