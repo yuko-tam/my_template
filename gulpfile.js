@@ -5,7 +5,6 @@ var imagemin = require('gulp-imagemin');
 var webserver = require('gulp-webserver');
 var plumber = require('gulp-plumber');
 var del = require("del");
-var concat = require("gulp-concat");
 var Notifier = require('node-notifier');
 //var notifier = new Notifier();
 var eslint = require('gulp-eslint');
@@ -32,15 +31,14 @@ gulp.task('sass', function(){
   gulp.src('./'+assetsDir+'/_sass/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(minifycss())
     .pipe(gulp.dest('./'+destDir+'/css/'))
 });
 
 // Sassコンパイルタスク
-// gulp.task('css', function(){
-//   gulp.src('./'+assetsDir+'/css/*.css')
-//     .pipe(gulp.dest('./'+destDir+'/css/'))
-// });
+gulp.task('css', function(){
+  gulp.src('./'+assetsDir+'/css/*.css')
+    .pipe(gulp.dest('./'+destDir+'/css/'))
+});
 
 
 // Sassコンパイルタスク
@@ -85,10 +83,10 @@ gulp.task('watch', function(){
   jsWatch.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
-  // var cssWatch = gulp.watch('./'+assetsDir+'/css/*.css', ['css']);
-  // cssWatch.on('change', function(event) {
-  //   console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-  // });
+  var cssWatch = gulp.watch('./'+assetsDir+'/css/*.css', ['css']);
+  cssWatch.on('change', function(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+  });
   var htmlWatch = gulp.watch('./'+assetsDir+'/**/*.html', ['html']);
   htmlWatch.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');

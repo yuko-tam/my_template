@@ -9,7 +9,7 @@ $category = get_the_terms( $post->ID, 'tour_cat');
             <p class="category line<?php echo $category[0]->slug;?>"><span><?php echo $category[0]->name; ?></span></p>
 
     <?php if ( has_post_thumbnail($post->ID) ): ?>
-		<figure class="thumb"><img src="<?php the_post_thumbnail_url($post->ID, 'medium')?>" alt="<?php echo esc_attr( get_the_title() );?>" /></figure>
+		<figure><a href="<?php echo the_permalink(); ?>" title="" class="hvr-float-shadow"><img src="<?php the_post_thumbnail_url($post->ID, 'medium')?>" alt="<?php echo esc_attr( get_the_title() );?>" /></a></figure>
     <?php endif;?>
     <div class="inner">
         <h2><?php echo esc_html( get_the_title() );?></h2>

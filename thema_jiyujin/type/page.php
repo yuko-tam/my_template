@@ -24,10 +24,18 @@
 
     <div class="contentsCont">
 <?php
+
+
             $pg_template_path = get_template_directory().'/page/_common.php';
             if (is_file($pg_template_path)) include($pg_template_path);
             else                            the_content ();
         }
+        if($page_uri == "reserve"){
+            echo get_page_by_path('cancel', null, '_setting')->post_content;
+        }
+
+
+
 ?>
 
     </div>

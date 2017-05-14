@@ -269,7 +269,3 @@ function root_relative_permalinks($input) {
     return make_href_root_relative($input);
 }
 add_filter( 'the_permalink', 'root_relative_permalinks' );
-
-
-
-

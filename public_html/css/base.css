@@ -1385,9 +1385,15 @@ img {
 
 .social {
   float: right; }
+  .wysiwygArea .social {
+    padding-bottom: 20px;
+    float: none; }
   .social ul li {
     float: right;
-    margin-left: 10px; }
+    margin-left: 10px;
+    padding-left: 0 !important; }
+    .social ul li:before {
+      display: none !important; }
     .social ul li * {
       line-height: 1;
       vertical-align: middle; }
@@ -1453,23 +1459,6 @@ img {
           background-size: 50px auto;
           bottom: -6px;
           height: 6px; } }
-    .index .contents .news dl {
-      margin-bottom: 60px; }
-      .index .contents .news dl dt {
-        float: left;
-        margin: 0 20px 5px 0; }
-      .index .contents .news dl dd {
-        overflow: hidden;
-        margin-bottom: 5px; }
-    @media screen and (max-width: 767px) {
-      .index .contents .news dl {
-        margin-bottom: 30px; }
-        .index .contents .news dl dt {
-          float: none;
-          margin: 0 0px 5px 0; }
-        .index .contents .news dl dd {
-          overflow: hidden;
-          margin-bottom: 5px; } }
   .index .contents .tour {
     padding-top: 80px; }
     .index .contents .tour ul {
@@ -1530,7 +1519,7 @@ img {
       text-shadow: 0px 0px 1.8px black; }
     .index .contents .about .inner {
       background: url(/img/index/bg_message.jpg) no-repeat 0 0;
-      background-size: 100% auto;
+      background-size: cover;
       padding: 60px 0 60px;
       color: #fff; }
     .index .contents .about .text {
@@ -1764,6 +1753,29 @@ img {
           opacity: 0.6;
           text-decoration: none; } }
 
+.newsList {
+  margin-bottom: 60px; }
+  .newsList dt {
+    float: left;
+    margin: 0 20px 5px 0; }
+  .newsList dd {
+    overflow: hidden;
+    margin-bottom: 5px; }
+  .news .newsList {
+    padding-top: 60px; }
+
+@media screen and (max-width: 767px) {
+  .newsList {
+    margin-bottom: 30px; }
+    .news .newsList {
+      padding-top: 30px; }
+    .newsList dt {
+      float: none;
+      margin: 0 0px 5px 0; }
+    .newsList dd {
+      overflow: hidden;
+      margin-bottom: 5px; } }
+
 .tourList {
   margin-bottom: 60px;
   position: relative; }
@@ -1774,7 +1786,8 @@ img {
     color: #fff;
     padding: 5px 30px;
     transform: skewX(-20deg);
-    font-size: 14px; }
+    font-size: 14px;
+    z-index: 3; }
     .tourList .category span {
       transform: skewX(20deg);
       display: block; }
@@ -2114,11 +2127,6 @@ img {
       width: 10em; }
     .comments-area form p label[for="siteguard_captcha"] {
       width: 20em; }
-  .comments-area form input[type="text"], .comments-area form textarea {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 3px 10px;
-    width: 100%; }
   .comments-area .form-submit {
     text-align: center; }
   .comments-area .submit {
@@ -2372,6 +2380,7 @@ img {
   background: #388db0;
   position: relative;
   line-height: 1;
+  border: none;
   -webkit-transition: all .25s ease-in;
   -moz-transition: all .25s ease-in;
   -ms-transition: all .25s ease-in;
@@ -2404,6 +2413,21 @@ img {
   @media screen and (max-width: 767px) {
     .buttonCenter {
       margin-bottom: 20px; } }
+
+.wpcf7-submit {
+  margin-top: 30px;
+  padding: 20px 80px 20px 80px;
+  color: #fff;
+  text-align: center;
+  background: #388db0;
+  outline: none;
+  border: none !important;
+  cursor: pointer; }
+  @media screen and (max-width: 767px) {
+    .wpcf7-submit {
+      width: auto;
+      display: block;
+      padding: 18px 0; } }
 
 .lineBlue {
   background: url(/img/base/line_bg_blue.gif) repeat 0 0; }
@@ -2530,6 +2554,17 @@ img {
 .accessIcon {
   background: url(/img/common/icon_access.png) no-repeat center 0;
   padding-top: 60px; }
+
+select {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 3px 10px; }
+
+input[type="text"], input[type="email"], textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+  width: 100%; }
 
 /*!
  * Hover.css (http://ianlunn.github.io/Hover/)

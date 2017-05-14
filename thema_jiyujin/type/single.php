@@ -29,11 +29,18 @@
 
     <div class="contentsCont">
 
+<div class="wysiwygArea">
+
+    <h1><?php echo esc_html( get_the_title() );?></h1>
+    <p class="date"><?php the_time("Y/m/d")?></p>
+    <?php the_content();?>
+    <?php include(get_template_directory().'/common/sns-buttons.php'); ?>
+
+</div>
 <?php
-            $pg_template_path = get_template_directory().'/page/_common.php';
-            if (is_file($pg_template_path)) include($pg_template_path);
-            else                            the_content ();
             include(get_template_directory().'/common/comments.php');
+
+
         }
 ?>
 

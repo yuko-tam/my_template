@@ -36,6 +36,7 @@
     background:$keyColor;
     position: relative;
     line-height: 1;
+    border: none;
     -webkit-transition: all .25s ease-in;
        -moz-transition: all .25s ease-in;
         -ms-transition: all .25s ease-in;
@@ -72,6 +73,22 @@
         margin-bottom: 20px;
     }
 }
+.wpcf7-submit{
+    margin-top: 30px;
+    padding:20px 80px 20px 80px;
+    color:#fff;
+    text-align: center;
+    background:$keyColor;
+    outline: none;
+    border: none !important;
+    cursor: pointer;
+    @include media(sp) {
+        width: auto;
+        display: block;
+        padding:18px 0;
+    }
+}
+
 
 
 
@@ -240,8 +257,18 @@
 
 
 
+select{
+    border-radius: 5px;
+    border:1px solid #ccc ;
+    padding:3px 10px;
+}
 
-
+input[type="text"],input[type="email"],textarea{
+    border-radius: 5px;
+    border:1px solid #ccc ;
+    padding:3px 10px;
+    width: 100%;
+}
 
 
 

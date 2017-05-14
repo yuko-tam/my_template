@@ -64,31 +64,7 @@
                 }
             }
 
-            dl{
-                margin-bottom: 60px;
-                dt{
-                    float: left;
-                    margin: 0 20px 5px 0;
-                }
-                dd{
-                    overflow: hidden;
-                    margin-bottom: 5px;
-                }
-            }
-            @include media(sp) { 
-                dl{
-                    margin-bottom: 30px;
-                    dt{
-                        float: none;
-                        margin: 0 0px 5px 0;
-                    }
-                    dd{
-                        overflow: hidden;
-                        margin-bottom: 5px;
-                    }
-                }
 
-            }
         }
 
 
@@ -180,7 +156,7 @@
             }
             .inner{
                 background: url(/img/index/bg_message.jpg) no-repeat 0 0;
-                background-size: 100% auto;
+                 background-size: cover;
                 padding:60px 0 60px;
                 color:#fff;
             }

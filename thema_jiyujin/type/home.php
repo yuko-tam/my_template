@@ -1,5 +1,9 @@
+<?php $topID = get_page_by_path('top')->ID; ?>
+
 <div class="mainVisual">
-    <p class="text">沖縄の離島、石垣島にある<br>シュノーケリング・初心者体験ダイビング専門店。</p>
+    <p class="text"><?php
+    echo get_field('メインテキスト',$topID);
+?></p>
     <p class="buttonArea"><a href="/reserve"><img src="/img/index/main_reservation.png" alt="ご予約はこちらから"></a></p>
     <p class="scroll"><a href="#contents"><img src="/img/common/icon_main_arrow.png" alt="コンテンツを見る"></a></p>
 </div>
@@ -26,7 +30,7 @@ query_posts( $news );
 <?php   if (have_posts()) :?>
 <section class="news"><div class="contentsCont">
         <h2><span class="jp">お知らせ</span><span class="en">NEWS</span></h2>
-        <dl>
+        <dl class="newsList">
 <?php include get_template_directory().'/common/news-list-block.php';?>
         </dl>
 
@@ -74,7 +78,6 @@ query_posts( $news );
     <section class="about">
 
 <?php 
-$topID = get_page_by_path('top')->ID;
 if(get_field('時遊人とは',$topID)):
 ?>
 <?php

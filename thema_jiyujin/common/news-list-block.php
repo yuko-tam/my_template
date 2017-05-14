@@ -1,4 +1,3 @@
-    <dl>
         <?php while (have_posts()): the_post();?>
             <dt><span><?php the_time("Y/m/d")?></dt>
             <dd>
@@ -13,4 +12,3 @@
             <?php endif;?>
             </dd>
         <?php endwhile;?>
-   </dl>

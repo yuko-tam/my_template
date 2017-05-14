@@ -599,10 +599,18 @@ z-index: 1;
 //social-------------------------------------------------------------------------------------
 .social{
 	float:right;
+	.wysiwygArea &{
+		padding-bottom: 20px;
+		float: none;
+	}
 	ul{
 		li{
 			float: right;
 			margin-left: 10px;
+			padding-left: 0 !important;
+			&:before{
+				display: none !important;
+			}
 			*{
 				line-height:1;
 				vertical-align: middle;

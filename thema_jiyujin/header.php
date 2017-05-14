@@ -106,8 +106,8 @@ endif;
         <p class="headlineText">沖縄の離島、石垣島にあるシュノーケリング・初心者体験ダイビング専門店。</p>
         <?php endif; ?>
         <div class="inner">
-            <p class="tel"><a href="tel:0980-87-0328">0980-87-0328</a></p>
-            <p class="time">受付時間 10時〜19時</p>
+            <p class="tel"><a href="tel:0980-87-0728">0980-87-0728</a></p>
+            <p class="time">受付時間 7時〜22時</p>
             <p class="contact"><a href="/contact/">お問い合わせ</a></p>
         </div>
     </div>
