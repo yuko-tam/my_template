@@ -32,9 +32,7 @@
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 <link rel="stylesheet" href="/css/base.css" type="text/css">
 <script type="text/javascript" src="/js/jquery-1.12.0.min.js"></script>
-<?php if(is_home()):?>
 <script type="text/javascript" src="/js/slick.min.js"></script>
-<?php endif; ?>
 <script type="text/javascript" src="/js/common.js"></script>
 
 <!--[if lt IE 9]>

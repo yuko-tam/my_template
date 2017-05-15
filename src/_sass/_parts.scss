@@ -83,7 +83,7 @@
     border: none !important;
     cursor: pointer;
     @include media(sp) {
-        width: auto;
+        width: 100%;
         display: block;
         padding:18px 0;
     }
@@ -261,6 +261,11 @@ select{
     border-radius: 5px;
     border:1px solid #ccc ;
     padding:3px 10px;
+}
+select[name="tour"]{
+    @include media(sp) {
+        width: 100%;
+    }
 }
 
 input[type="text"],input[type="email"],textarea{

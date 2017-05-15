@@ -729,15 +729,27 @@
     }
     .inner{
         overflow: hidden;
-        padding-left: 60px;
+        padding:0 60px;
     }
     h3{
         font-weight: bold;
         font-size: 24px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
     p{
         margin-bottom: 20px;
+    }
+    dl{
+        dt{
+            float: left;
+            padding: 0 20px 5px 0;
+            font-weight: bold;
+            width: 7em;
+        }
+        dd{
+            overflow: hidden;
+            padding: 0 0px 5px 0;
+        }
     }
 }
 @include media(sp) {
@@ -757,12 +769,24 @@
             margin-bottom: 10px;
         }
         .inner{
-            padding-left: 0;
+            padding: 0;
         }
         h3{
             font-size: 24px;
             text-align: center;
         }
+        dl{
+            dt{
+                float: none;
+                padding: 0 0px 2px 0;
+                font-weight: bold;
+                width: auto;
+            }
+            dd{
+                padding: 0 0px 10px 0;
+            }
+        }
+
     }
 
 }
@@ -915,6 +939,18 @@
     }
     table{
         margin:40px 0 0;
+    }
+}
+
+
+
+.aboutArea{
+    padding:60px 0;
+    @include media(sp) {
+        padding:30px 0;
+    }
+    iframe{
+        margin-top: 40px;
     }
 }
 

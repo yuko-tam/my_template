@@ -80,7 +80,7 @@ img{
 		background:$keyColor;
 		padding-bottom: 20px;
 		position: relative;
-		z-index: 2;
+		z-index: 4;
 		&:after{
 			content: '';
 			display: block;
@@ -133,10 +133,12 @@ img{
 				     -o-transition: all .25s ease;
 				        transition: all .25s ease;
 			}
+			@include media(pc) {
 			a:hover{
 				text-decoration: none;
 				padding-top: 50px;
 				padding-bottom: 10px;
+			}
 			}
 		}
 
@@ -174,6 +176,8 @@ img{
 				padding:0px 0 0;
 				float: none;
 				background:$keyColor;
+				z-index: 10;
+				width: 100%;
 
 				li{
 					width: 33.3%;
@@ -230,6 +234,17 @@ img{
 }
 .menu-trigger span:nth-of-type(3) {
 	bottom: 0;
+}
+.menu-trigger.on span:nth-of-type(1) {
+	-webkit-transform: translateY(10px) rotate(-45deg);
+	transform: translateY(10px) rotate(-45deg);
+}
+.menu-trigger.on span:nth-of-type(2) {
+	opacity: 0;
+}
+.menu-trigger.on span:nth-of-type(3) {
+	-webkit-transform: translateY(-15px) rotate(45deg);
+	transform: translateY(-15px) rotate(45deg);
 }
 
 //navi-------------------------------------------------------------------------------------
@@ -350,7 +365,12 @@ z-index: 1;
 		@extend %cf;
 	}
 
-
+.tour .contentsCont{
+	padding-top: 60px;
+	@include media(sp) {
+		padding-top: 20px;
+	}
+}
 
 //pagetop-------------------------------------------------------------------------------------
 .pagetop{
@@ -364,6 +384,9 @@ z-index: 1;
 	padding:50px 0;
 	margin-top: 100px;
 	overflow: hidden;
+	.index &{
+		margin-top: 0;
+	}
 	@include media(sp) {
 		margin-top: 30px;
 		padding:20px 0;
@@ -513,6 +536,11 @@ z-index: 1;
 		> ul{
 			float: left;
 			margin-right: 30px;
+			@include media(sp) {
+				width: 50%;
+				margin-right: 0;
+
+			}
 		}
 		li{
 			position: relative;
@@ -538,7 +566,7 @@ z-index: 1;
 		}
 	}
 
-	.fb-page{
+	.fbFeed{
 		float: right;
 		width: 500px;
 		margin-bottom: 60px;

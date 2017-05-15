@@ -965,7 +965,7 @@ img {
   background: #388db0;
   padding-bottom: 20px;
   position: relative;
-  z-index: 2; }
+  z-index: 4; }
   .header .headerCont:after {
     content: '';
     display: block;
@@ -1021,10 +1021,11 @@ img {
       -ms-transition: all .25s ease;
       -o-transition: all .25s ease;
       transition: all .25s ease; }
-    .header .headerCont .navi a:hover {
-      text-decoration: none;
-      padding-top: 50px;
-      padding-bottom: 10px; }
+    @media screen and (min-width: 768px) {
+      .header .headerCont .navi a:hover {
+        text-decoration: none;
+        padding-top: 50px;
+        padding-bottom: 10px; } }
 
 @media screen and (max-width: 767px) {
   .header .headerCont {
@@ -1051,7 +1052,9 @@ img {
       font-weight: bold;
       padding: 0px 0 0;
       float: none;
-      background: #388db0; }
+      background: #388db0;
+      z-index: 10;
+      width: 100%; }
       .header .headerCont .navi li {
         width: 33.3%;
         font-size: 13px;
@@ -1098,6 +1101,17 @@ img {
 
 .menu-trigger span:nth-of-type(3) {
   bottom: 0; }
+
+.menu-trigger.on span:nth-of-type(1) {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg); }
+
+.menu-trigger.on span:nth-of-type(2) {
+  opacity: 0; }
+
+.menu-trigger.on span:nth-of-type(3) {
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-15px) rotate(45deg); }
 
 .breadNav {
   line-height: 1;
@@ -1204,6 +1218,12 @@ img {
   background-color: #fff;
   z-index: 1; }
 
+.tour .contentsCont {
+  padding-top: 60px; }
+  @media screen and (max-width: 767px) {
+    .tour .contentsCont {
+      padding-top: 20px; } }
+
 .footerBanner {
   background: #388db0;
   color: #fff;
@@ -1211,6 +1231,8 @@ img {
   padding: 50px 0;
   margin-top: 100px;
   overflow: hidden; }
+  .index .footerBanner {
+    margin-top: 0; }
   @media screen and (max-width: 767px) {
     .footerBanner {
       margin-top: 30px;
@@ -1323,6 +1345,10 @@ img {
     .footer nav > ul {
       float: left;
       margin-right: 30px; }
+      @media screen and (max-width: 767px) {
+        .footer nav > ul {
+          width: 50%;
+          margin-right: 0; } }
     .footer nav li {
       position: relative;
       margin-bottom: 5px; }
@@ -1341,12 +1367,12 @@ img {
       .footer nav li ul {
         margin-left: 10px;
         margin-top: 5px; }
-  .footer .fb-page {
+  .footer .fbFeed {
     float: right;
     width: 500px;
     margin-bottom: 60px; }
     @media screen and (max-width: 767px) {
-      .footer .fb-page {
+      .footer .fbFeed {
         float: none;
         width: 300px;
         margin: 0 auto; } }
@@ -1486,9 +1512,12 @@ img {
         transform: skewX(-20deg);
         position: absolute;
         left: -10px;
-        top: -20px; }
+        top: -20px;
+        z-index: 2; }
       .index .contents .tour ul figure {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        height: 180px;
+        overflow: hidden; }
       .index .contents .tour ul .date {
         font-size: 14px; }
       .index .contents .tour ul h3 {
@@ -1499,15 +1528,14 @@ img {
         font-size: 13px; }
   @media screen and (max-width: 767px) {
     .index .contents .tour {
-      padding-top: 80px; }
+      padding-top: 40px; }
       .index .contents .tour ul {
-        margin-bottom: 50px; }
+        margin: 50px 0; }
         .index .contents .tour ul li {
           width: auto;
           float: none;
-          position: relative; }
-          .index .contents .tour ul li:not(:first-child) {
-            margin: 0px; }
+          position: relative;
+          margin: 30px 0 0px !important; }
         .index .contents .tour ul h3 {
           font-weight: bold;
           margin: 5px 0 5px;
@@ -2209,15 +2237,25 @@ img {
 
 .staffList .inner {
   overflow: hidden;
-  padding-left: 60px; }
+  padding: 0 60px; }
 
 .staffList h3 {
   font-weight: bold;
   font-size: 24px;
-  margin-bottom: 15px; }
+  margin-bottom: 25px; }
 
 .staffList p {
   margin-bottom: 20px; }
+
+.staffList dl dt {
+  float: left;
+  padding: 0 20px 5px 0;
+  font-weight: bold;
+  width: 7em; }
+
+.staffList dl dd {
+  overflow: hidden;
+  padding: 0 0px 5px 0; }
 
 @media screen and (max-width: 767px) {
   .staffList li {
@@ -2232,10 +2270,17 @@ img {
     text-align: center;
     margin-bottom: 10px; }
   .staffList .inner {
-    padding-left: 0; }
+    padding: 0; }
   .staffList h3 {
     font-size: 24px;
-    text-align: center; } }
+    text-align: center; }
+  .staffList dl dt {
+    float: none;
+    padding: 0 0px 2px 0;
+    font-weight: bold;
+    width: auto; }
+  .staffList dl dd {
+    padding: 0 0px 10px 0; } }
 
 .messageArea {
   padding: 80px;
@@ -2350,6 +2395,14 @@ img {
   .shopArea table {
     margin: 40px 0 0; }
 
+.aboutArea {
+  padding: 60px 0; }
+  @media screen and (max-width: 767px) {
+    .aboutArea {
+      padding: 30px 0; } }
+  .aboutArea iframe {
+    margin-top: 40px; }
+
 /* ### parts.scss ### */
 .headline2 {
   text-align: center;
@@ -2425,7 +2478,7 @@ img {
   cursor: pointer; }
   @media screen and (max-width: 767px) {
     .wpcf7-submit {
-      width: auto;
+      width: 100%;
       display: block;
       padding: 18px 0; } }
 
@@ -2559,6 +2612,10 @@ select {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 3px 10px; }
+
+@media screen and (max-width: 767px) {
+  select[name="tour"] {
+    width: 100%; } }
 
 input[type="text"], input[type="email"], textarea {
   border-radius: 5px;

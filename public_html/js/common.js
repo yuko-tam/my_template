@@ -172,9 +172,9 @@ $(function () {
    });
 
 
-    $(".spMenu").on('click',function(){
+    $(".spMenu a").on('click',function(){
         $(".header .navi").toggle();
-        $('.menu-trigger').toggleClass("on");
+        $(this).toggleClass("on");
     })
 
     $(".faqList h2").on('click',function(){

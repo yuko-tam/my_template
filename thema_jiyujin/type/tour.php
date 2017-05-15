@@ -31,7 +31,7 @@ query_posts( $tour );
 
   <div class="contentsCont">
 
-    <nav class="categoryMenu borderBlue">
+    <!--nav class="categoryMenu borderBlue">
         <ul>
             <li class="lineBlue"><a href="/tour/">全てのツアー</a></li>
             <?php
@@ -49,7 +49,7 @@ query_posts( $tour );
                 <li class="line<?php echo $link;?>"><a href="/tour/tour_cat/<?php echo $link;?>"><?php echo $nm;?></a></li>
             <?php endforeach;?>
         </ul>
-    </nav>
+    </nav-->
 
 <?php include get_template_directory().'/common/course-list-block.php';?>
   </div>

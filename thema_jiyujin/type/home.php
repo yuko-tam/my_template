@@ -39,12 +39,11 @@ query_posts( $news );
 
 <?php endif;?>
 
-
-
+<?php wp_reset_query(); ?>
 
     <section class="tour"><div class="contentsCont">
         <h2><span class="jp">ツアー一覧</span><span class="en">TOUR</span></h2>
-        <ul>
+        <!--ul>
             <?php
               $args = array(
                 "get"=>"all",
@@ -69,8 +68,47 @@ query_posts( $news );
                     </a>
                 </li>
             <?php endforeach;?>
-        </ul>
-        <p class="buttonCenter"><a href="/tour/" class="button">詳しくコースを見る</a></p>
+        </ul-->
+<?php
+if ( wp_is_mobile() ){
+    $tour = array(
+        'post_type' => 'tour',
+        'showposts' => 3
+    );
+}else{
+    $tour = array(
+        'post_type' => 'tour',
+        'showposts' => 3
+    );
+}
+query_posts( $tour );
+?>
+            <ul>
+<?php   if (have_posts()) :?><?php while (have_posts()): the_post();?>
+
+<?php
+//カテゴリ名取得
+$category = get_the_terms( $post->ID, 'tour_cat');
+?>
+
+
+                <li>
+                    <a href="<?php echo the_permalink(); ?>" class="hvr-grow">
+                        <span class="category line<?php echo $category[0]->slug;?>"><?php echo $category[0]->name; ?></span>
+                        <?php if ( has_post_thumbnail($post->ID) ): ?>
+                            <figure><img src="<?php the_post_thumbnail_url($post->ID, 'medium')?>" alt="<?php echo esc_attr( get_the_title() );?>" /></figure>
+                        <?php endif;?>
+                        <h3><?php echo esc_html( get_the_title() );?></h3>
+                        <p>料金：<?php echo get_field('料金'); ?></p>
+                    </a>
+                </li>
+
+
+<?php endwhile;?>
+<?php endif;?>
+            </ul>
+
+        <p class="buttonCenter"><a href="/tour/" class="button">ツアー一覧を見る</a></p>
     <!-- /.tour --></div></section>
 
 
@@ -157,7 +195,7 @@ query_posts( $staff );
 
 
 <?php endif;?>
-        <p class="buttonCenter"><a href="/staff/" class="button">もっと見る</a></p>
+        <p class="buttonCenter"><a href="/about/#staff" class="button">もっと見る</a></p>
     <!-- /.staff --></section>
 
 
