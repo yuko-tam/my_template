@@ -16,10 +16,9 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <?php endif; ?>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="<?php echo esc_attr($myMetaDescription);?>">
-
 <meta property="og:url" content="<?php echo esc_attr(get_the_canonical_url());?>">
 <meta property="og:image" content="<?php echo esc_attr($myOgImageUrl);?>">
 <meta property="og:site_name" content="<?php echo esc_attr(get_bloginfo('name'));?>">

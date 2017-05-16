@@ -93,7 +93,7 @@ $category = get_the_terms( $post->ID, 'tour_cat');
 
     <?php if(get_field('スケジュール') == "あり"): ?>
     <h2 class="headline2 scheduleIcon"><span class="jp">ツアーのスケジュール</span><span class="en">SCHEDULE</span></h2>
-
+    <h3 class="headline3"><?php echo get_field('スケジュールタイトル'); ?></h3>
     <ul class="schedulePlan">
         <?php if(get_field('時間1') && get_field('スケジュール1')): ?>
         <li>
@@ -176,6 +176,45 @@ $category = get_the_terms( $post->ID, 'tour_cat');
         </li>
         <?php endif; ?>
     </ul>
+
+    <?php if(get_field('スケジュール2つめ') == "あり"): ?>
+    <h3 class="headline3"><?php echo get_field('スケジュールタイトル2'); ?></h3>
+    <ul class="schedulePlan">
+        <?php if(get_field('時間2-1') && get_field('スケジュール2-1')): ?>
+        <li>
+            <p class="time"><?php echo get_field('時間2-1'); ?></p>
+            <div class="inner">
+                <p><?php echo get_field('スケジュール2-1'); ?></p>
+            </div>
+        </li>
+        <?php endif; ?>
+        <?php if(get_field('時間2-2') && get_field('スケジュール2-2')): ?>
+        <li>
+            <p class="time"><?php echo get_field('時間2-2'); ?></p>
+            <div class="inner">
+                <p><?php echo get_field('スケジュール2-2'); ?></p>
+            </div>
+        </li>
+        <?php endif; ?>
+        <?php if(get_field('時間2-3') && get_field('スケジュール2-3')): ?>
+        <li>
+            <p class="time"><?php echo get_field('時間2-3'); ?></p>
+            <div class="inner">
+                <p><?php echo get_field('スケジュール2-3'); ?></p>
+            </div>
+        </li>
+        <?php endif; ?>
+        <?php if(get_field('時間2-4') && get_field('スケジュール2-4')): ?>
+        <li>
+            <p class="time"><?php echo get_field('時間2-4'); ?></p>
+            <div class="inner">
+                <p><?php echo get_field('スケジュール2-4'); ?></p>
+            </div>
+        </li>
+        <?php endif; ?>
+    </ul>
+    <?php endif; ?>
+
     <p class="mb20">※スケジュールは目安です。当日の天候・海況により若干変動します。</p>
     <p class="buttonCenter"><a href="/reserve/" class="button">ご予約する</a></p>
     <?php endif; ?>

@@ -7,6 +7,9 @@ body{
 	color: #333;
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
+	@include media(sp) {
+		font-size: 14px;
+	}
 }
 a{
 	color:$colorLink;
@@ -453,10 +456,10 @@ z-index: 1;
 	}
 	.mapArea iframe {
 	position: absolute;
-	top: 0;
+	top: -250px;
 	right: 0;
 	width: 50% !important;
-	height: 300px !important;
+	height: 700px !important;
 	}
 }
 
