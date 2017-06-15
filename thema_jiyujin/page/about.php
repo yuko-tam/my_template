@@ -56,10 +56,6 @@ query_posts( $staff );
                     <dd><?php echo get_field('好きなこと'); ?></dd>
                     <?php endif; ?>
 
-                    <?php if(get_field('嫌いなこと')): ?>
-                    <dt>嫌いなこと</dt>
-                    <dd><?php echo get_field('嫌いなこと'); ?></dd>
-                    <?php endif; ?>
 
                     <?php if(get_field('コメント')): ?>
                     <dt>コメント</dt>
@@ -111,7 +107,7 @@ query_posts( $staff );
     </div></section>
 
 
-  <section class="accessArea"><div class="contentsCont">
+  <section class="mapArea"><div class="contentsCont">
     <h2 class="headline2 accessIcon"><span class="jp">アクセスマップ</span><span class="en">ACCESS MAP</span></h2>
     <div class="mapWrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6373.433426468053!2d124.16657971631717!3d24.336358534754115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45788895b98118ae!2z55-z5Z6j5bO244K344Ol44OO44O844Kx44Oq44Oz44Kw5pmC6YGK5Lq6!5e0!3m2!1sja!2sjp!4v1494731318940" width="1026" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>

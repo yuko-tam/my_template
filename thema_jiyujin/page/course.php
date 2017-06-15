@@ -1,13 +1,13 @@
 
 
 <?php
-$pg_template_path = get_template_directory().'/tour/';
+$pg_template_path = get_template_directory().'/course/';
 if( get_post_type() == "page" || is_tax()):
-$tour = array(
-    'post_type' => 'tour',
+$course = array(
+    'post_type' => 'course',
     'showposts' => 0
 );
-query_posts( $tour );
+query_posts( $course );
 ?>
 
 
@@ -28,9 +28,8 @@ query_posts( $tour );
 
   <div class="contentsCont">
 
-    <!--nav class="categoryMenu borderBlue">
+    <nav class="categoryMenu borderBlue">
         <ul>
-            <li class="lineBlue"><a href="/tour/">全てのツアー</a></li>
             <?php
               $args = array(
                 "get"=>"all",
@@ -38,15 +37,15 @@ query_posts( $tour );
                 "orderby"=>"id",
                 "order"=>"DESC"
                 );
-               $cats = get_terms("tour_cat", $args);
+               $cats = get_terms("course_cat", $args);
                foreach($cats as $val) :
                 $link = $val->slug;
                 $nm = $val->name;
               ?>
-                <li class="line<?php echo $link;?>"><a href="/tour/tour_cat/<?php echo $link;?>"><?php echo $nm;?></a></li>
+                <li><a href="/course/course_cat/<?php echo $link;?>"><?php echo $nm;?></a></li>
             <?php endforeach;?>
         </ul>
-    </nav-->
+    </nav>
 
 <?php include get_template_directory().'/common/course-list-block.php';?>
   </div>
@@ -55,7 +54,7 @@ query_posts( $tour );
 <!-- /============================contents============================ -->
 
 
-<?php elseif(get_post_type() == "tour" ):
+<?php elseif(get_post_type() == "course" ):
 	$pg_template_path .= 'single.php';
     include $pg_template_path;
 ?>

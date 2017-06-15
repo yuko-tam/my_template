@@ -52,7 +52,14 @@ function tinymce_init( $init ) {
 // アイキャッチ画像利用
 add_theme_support( 'post-thumbnails' );
 // thumbnail sizes
-add_image_size( 'tour-thumbnail', 500, 350);
+add_image_size( 'news-list-thumbnail-sp', 180, 180, 1);
+
+add_image_size( 'list-thumbnail', 640, 640, 1);
+add_image_size( 'list-thumbnail-sp', 525, 525, 1);//本当は、540x540がいい
+
+add_image_size( 'post-head', 650, 300);
+add_image_size( 'works-thumbnail', 1002, 1002);
+
 
 
 
@@ -264,4 +271,5 @@ function root_relative_permalinks($input) {
 add_filter( 'the_permalink', 'root_relative_permalinks' );
 
 
-add_filter( 'jetpack_enable_open_graph', '__return_false' );
+
+

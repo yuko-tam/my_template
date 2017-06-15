@@ -76,9 +76,9 @@ figure {
     padding-right: 10px;
     padding-left: 10px; } }
 
-.header .headerInner1, .header .headerCont .headerInner, .breadNav ul, .contentsCont, .footer .footerCont, .footer .bannerArea, .footer nav, .index .contents .tour ul, .index .contents .about ul, .categoryMenu ul, .tourList, .tourList dl, .tourTitle, .schedulePlan li, .blogList, .shipArea .shipAreaCont, .shipArea ul {
+.header .headerInner1, .header .headerCont .headerInner, .breadNav ul, .contentsCont, .footer .footerCont, .footer .bannerArea, .footer nav, .index .contents .tour ul, .index .contents .about ul, .categoryMenu ul, .tourList, .tourList dl, .tourTitle, .schedulePlan li, .blogList, .shipArea .shipAreaCont, .shipArea ul, .thumArea {
   *zoom: 1; }
-  .header .headerInner1:after, .header .headerCont .headerInner:after, .breadNav ul:after, .contentsCont:after, .footer .footerCont:after, .footer .bannerArea:after, .footer nav:after, .index .contents .tour ul:after, .index .contents .about ul:after, .categoryMenu ul:after, .tourList:after, .tourList dl:after, .tourTitle:after, .schedulePlan li:after, .blogList:after, .shipArea .shipAreaCont:after, .shipArea ul:after {
+  .header .headerInner1:after, .header .headerCont .headerInner:after, .breadNav ul:after, .contentsCont:after, .footer .footerCont:after, .footer .bannerArea:after, .footer nav:after, .index .contents .tour ul:after, .index .contents .about ul:after, .categoryMenu ul:after, .tourList:after, .tourList dl:after, .tourTitle:after, .schedulePlan li:after, .blogList:after, .shipArea .shipAreaCont:after, .shipArea ul:after, .thumArea:after {
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -1828,6 +1828,9 @@ img {
     .tourList figure img {
       border-radius: 15px;
       box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.8); }
+      @media screen and (max-width: 767px) {
+        .tourList figure img {
+          border-radius: 5px; } }
   .tourList .inner {
     overflow: hidden;
     padding-left: 30px; }
@@ -1931,6 +1934,9 @@ img {
   .tourMainVisual img {
     border-radius: 15px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.8); }
+    @media screen and (max-width: 767px) {
+      .tourMainVisual img {
+        border-radius: 10px; } }
 
 .tourTable {
   margin-top: 40px; }
@@ -1953,7 +1959,7 @@ img {
     position: relative; }
     @media screen and (max-width: 767px) {
       .schedulePlan p.time {
-        width: 70px; } }
+        width: 100px; } }
   .schedulePlan li:not(:last-child) p.time:after {
     content: "";
     display: block;
@@ -1966,7 +1972,7 @@ img {
     background: url(/img/base/line_schedule.png) no-repeat 0 0; }
     @media screen and (max-width: 767px) {
       .schedulePlan li:not(:last-child) p.time:after {
-        width: 70px;
+        width: 100px;
         background-size: 100% auto; } }
   .schedulePlan li:last-child p.time:after {
     content: "";
@@ -1980,7 +1986,7 @@ img {
     background: url(/img/base/line_schedule_b.gif) no-repeat 0 0; }
     @media screen and (max-width: 767px) {
       .schedulePlan li:last-child p.time:after {
-        width: 70px;
+        width: 100px;
         bottom: -25px;
         background-size: 100% auto; } }
   .schedulePlan .inner {
@@ -2236,7 +2242,9 @@ img {
 .staffList figure {
   float: left; }
   .staffList figure img {
-    border-radius: 305px; }
+    border-radius: 305px;
+    width: 305px;
+    height: auto; }
 
 .staffList .inner {
   overflow: hidden;
@@ -2419,6 +2427,32 @@ img {
   left: 0;
   width: 100% !important;
   height: 100% !important; }
+
+.thumArea {
+  margin-bottom: 50px; }
+  @media screen and (max-width: 767px) {
+    .thumArea {
+      margin-bottom: 20px; } }
+  .thumArea li {
+    float: left;
+    width: 240px;
+    margin-bottom: 20px; }
+    .thumArea li:not(:first-child) {
+      margin-left: 20px; }
+      @media screen and (max-width: 767px) {
+        .thumArea li:not(:first-child) {
+          margin-left: 0; } }
+    .thumArea li img {
+      border-radius: 15px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.8); }
+      @media screen and (max-width: 767px) {
+        .thumArea li img {
+          border-radius: 5px; } }
+    @media screen and (max-width: 767px) {
+      .thumArea li {
+        width: 48%; }
+        .thumArea li:nth-child(odd) {
+          float: right; } }
 
 /* ### parts.scss ### */
 .headline2 {

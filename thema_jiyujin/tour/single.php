@@ -27,7 +27,7 @@ $category = get_the_terms( $post->ID, 'tour_cat');
         </div>
         <figure class="tourMainVisual"><img src="<?php the_post_thumbnail_url($post->ID, 'medium')?>" alt=""></figure>
         
-
+        <p><?php the_content(); ?></p>
 
     <table class="tableStyle01 tourTable">
         <?php if(get_field('料金')): ?>
@@ -89,6 +89,22 @@ $category = get_the_terms( $post->ID, 'tour_cat');
 
     </table>
     <p class="buttonCenter"><a href="/reserve/" class="button">ご予約する</a></p>
+
+
+    <?php if(get_field('画像') == "あり"): ?>
+    <ul class="thumArea">
+        <?php if(get_field('画像1') != null): ?><li><img src="<?php $image = get_field('画像1'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像2') != null): ?><li><img src="<?php $image = get_field('画像2'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像3') != null): ?><li><img src="<?php $image = get_field('画像3'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像4') != null): ?><li><img src="<?php $image = get_field('画像4'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像5') != null): ?><li><img src="<?php $image = get_field('画像5'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像6') != null): ?><li><img src="<?php $image = get_field('画像6'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像7') != null): ?><li><img src="<?php $image = get_field('画像7'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+        <?php if(get_field('画像8') != null): ?><li><img src="<?php $image = get_field('画像8'); echo $image['sizes']['thumbnail']; ?>" /></li><?php endif; ?>
+    </ul>
+    <?php endif; ?>
+
+
 
 
     <?php if(get_field('スケジュール') == "あり"): ?>
